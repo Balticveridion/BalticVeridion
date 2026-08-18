@@ -37,8 +37,39 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
+  const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://balticveridion.com/#organization',
+  name: 'Baltic Veridion',
+  url: 'https://balticveridion.com',
+  logo: 'https://balticveridion.com/opengraph-image.png',
+  email: 'contact@balticveridion.com',
+  description:
+    'Independent industrial sourcing and supplier qualification partner helping European manufacturers identify, evaluate and qualify reliable suppliers across Lithuania, Latvia and Estonia.',
+  areaServed: [
+    {
+      '@type': 'Country',
+      name: 'Lithuania',
+    },
+    {
+      '@type': 'Country',
+      name: 'Latvia',
+    },
+    {
+      '@type': 'Country',
+      name: 'Estonia',
+    },
+  ],
+}
   return (
     <>
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(organizationJsonLd).replace(/</g, '\\u003c'),
+  }}
+/>
       <SiteHeader />
       <main>
         <Hero />
