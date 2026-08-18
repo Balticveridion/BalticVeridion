@@ -66,11 +66,15 @@ export default function RootLayout({
       className={`${manrope.variable} ${inter.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
+  {children}
 
+  {process.env.NODE_ENV === 'production' && (
+    <>
+      <Analytics />
       <GoogleAnalytics gaId="G-H5TZQGJWDC" />
+    </>
+  )}
+</body>
     </html>
   )
 }
