@@ -11,9 +11,28 @@ import {
 import { PageShell } from '@/components/page-shell'
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'Contact Baltic Veridion',
   description:
-    'Contact Baltic Veridion to discuss supplier discovery, evaluation, due diligence, factory audits and production monitoring in the Baltic States.',
+    'Contact Baltic Veridion to discuss supplier discovery, evaluation, due diligence, factory audits and production monitoring across Lithuania, Latvia and Estonia.',
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    title: 'Contact Baltic Veridion',
+    description:
+      'Discuss your supplier sourcing, qualification or industrial procurement requirements with Baltic Veridion.',
+    url: 'https://balticveridion.com/contact',
+    siteName: 'Baltic Veridion',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Baltic Veridion',
+      },
+    ],
+  },
 }
 
 const contactEmail = 'contact@balticveridion.com'
@@ -185,9 +204,11 @@ export default function ContactPage() {
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           <div className="rounded-lg border border-border bg-card p-6">
             <Building2 className="h-6 w-6 text-teal" />
+
             <h3 className="mt-5 font-heading text-lg font-semibold text-primary">
               New supplier search
             </h3>
+
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Identify and evaluate manufacturing partners that match your
               technical, commercial and operational requirements.
@@ -196,9 +217,11 @@ export default function ContactPage() {
 
           <div className="rounded-lg border border-border bg-card p-6">
             <ShieldCheck className="h-6 w-6 text-teal" />
+
             <h3 className="mt-5 font-heading text-lg font-semibold text-primary">
               Supplier verification
             </h3>
+
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Independently verify supplier capability, reliability, quality
               systems and operational readiness.
@@ -207,9 +230,11 @@ export default function ContactPage() {
 
           <div className="rounded-lg border border-border bg-card p-6">
             <MessageSquareText className="h-6 w-6 text-teal" />
+
             <h3 className="mt-5 font-heading text-lg font-semibold text-primary">
               Local project support
             </h3>
+
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Maintain visibility during supplier onboarding, production and
               delivery through local Baltic support.

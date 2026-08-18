@@ -11,9 +11,28 @@ import {
 import { PageShell } from '@/components/page-shell'
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'About Baltic Veridion',
   description:
-    'Learn about Baltic Veridion, an independent industrial sourcing partner helping European manufacturers identify and qualify reliable suppliers across the Baltic States.',
+    'Learn about Baltic Veridion, an independent industrial sourcing partner helping European manufacturers identify, evaluate and qualify reliable suppliers across Lithuania, Latvia and Estonia.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About Baltic Veridion | Independent Industrial Sourcing',
+    description:
+      'Learn how Baltic Veridion helps European manufacturers reduce sourcing risk through independent supplier discovery, evaluation and qualification across the Baltic States.',
+    url: 'https://balticveridion.com/about',
+    siteName: 'Baltic Veridion',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'About Baltic Veridion',
+      },
+    ],
+  },
 }
 
 const values = [
@@ -66,20 +85,20 @@ export default function AboutPage() {
 
           <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              Modern sourcing involves more than identifying companies with the right
-              equipment or competitive pricing.
+              Modern sourcing involves more than identifying companies with the
+              right equipment or competitive pricing.
             </p>
 
             <p>
-              Manufacturers need confidence that a potential supplier has the technical
-              capability, operational discipline, business reliability and long-term
-              commitment required to support their business.
+              Manufacturers need confidence that a potential supplier has the
+              technical capability, operational discipline, business reliability
+              and long-term commitment required to support their business.
             </p>
 
             <p>
-              Baltic Veridion was created to provide that confidence through independent
-              supplier discovery, evaluation, due diligence, factory verification and
-              production support across the Baltic States.
+              Baltic Veridion was created to provide that confidence through
+              independent supplier discovery, evaluation, due diligence, factory
+              verification and production support across the Baltic States.
             </p>
           </div>
         </div>
@@ -102,8 +121,8 @@ export default function AboutPage() {
             </p>
 
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              To become the most trusted independent industrial sourcing partner in the
-              Baltic region.
+              To become the most trusted independent industrial sourcing partner
+              in the Baltic region.
             </p>
           </div>
         </div>
@@ -120,8 +139,9 @@ export default function AboutPage() {
 
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground">
           Baltic Veridion is not a supplier, distributor or manufacturers&apos;
-          representative. Our role is to provide objective information and structured
-          decision support throughout the supplier qualification process.
+          representative. Our role is to provide objective information and
+          structured decision support throughout the supplier qualification
+          process.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -161,9 +181,9 @@ export default function AboutPage() {
           </h2>
 
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Our focus on Lithuania, Latvia and Estonia allows us to build deeper regional
-            knowledge and support clients with practical, on-the-ground supplier
-            intelligence.
+            Our focus on Lithuania, Latvia and Estonia allows us to build deeper
+            regional knowledge and support clients with practical, on-the-ground
+            supplier intelligence.
           </p>
         </div>
 
@@ -196,8 +216,9 @@ export default function AboutPage() {
         </h2>
 
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#aebccb]">
-          Successful sourcing begins with confidence in the decisions you make. Our role
-          is to make those decisions more informed, transparent and independent.
+          Successful sourcing begins with confidence in the decisions you make.
+          Our role is to make those decisions more informed, transparent and
+          independent.
         </p>
 
         <Link

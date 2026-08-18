@@ -12,13 +12,30 @@ import {
   Trees,
 } from 'lucide-react'
 import { PageShell } from '@/components/page-shell'
-
 export const metadata: Metadata = {
-  title: 'Industries',
+  title: 'Industries We Support',
   description:
-    'Industrial sectors supported by Baltic Veridion across Lithuania, Latvia and Estonia.',
+    'Explore the industrial sectors Baltic Veridion supports across Lithuania, Latvia and Estonia, including metal processing, machinery, automotive, electronics, plastics, furniture and contract manufacturing.',
+  alternates: {
+    canonical: '/industries',
+  },
+  openGraph: {
+    title: 'Industries We Support | Baltic Veridion',
+    description:
+      'Discover the industrial sectors where Baltic Veridion helps European manufacturers identify and qualify reliable suppliers.',
+    url: 'https://balticveridion.com/industries',
+    siteName: 'Baltic Veridion',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Baltic Veridion Industries',
+      },
+    ],
+  },
 }
-
 const industries = [
   {
     icon: Layers3,
@@ -61,14 +78,12 @@ const industries = [
     capabilities: 'Flexible low-to-medium volume production, multi-process coordination and outsourced manufacturing.',
   },
 ]
-
 const advantages = [
   ['EU market access', 'Production within the European Union, with familiar regulatory and commercial frameworks.'],
   ['Engineering capability', 'Experienced technical teams supporting build-to-print and customised industrial work.'],
   ['Flexible production', 'A strong base of SMEs suited to specialised, low-to-medium volume requirements.'],
   ['Practical proximity', 'Efficient access from Northern and Central Europe for audits, visits and logistics.'],
 ]
-
 export default function IndustriesPage() {
   return (
     <PageShell
@@ -94,42 +109,41 @@ export default function IndustriesPage() {
           </article>
         ))}
       </div>
-
-      <section className="mt-24 border-y border-border py-20">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
-          Why source in the Baltic States
-        </p>
-        <h2 className="mt-4 max-w-2xl font-heading text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
-          A capable regional supply base — when the fit is verified
-        </h2>
-        <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">
-          {advantages.map(([title, body]) => (
-            <div key={title} className="bg-card p-7 sm:p-8">
-              <h3 className="font-heading text-lg font-semibold text-primary">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
-            </div>
-          ))}
+  <section className="mt-24 border-y border-border py-20">
+    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
+      Why source in the Baltic States
+    </p>
+    <h2 className="mt-4 max-w-2xl font-heading text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
+      A capable regional supply base — when the fit is verified
+    </h2>
+    <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">
+      {advantages.map(([title, body]) => (
+        <div key={title} className="bg-card p-7 sm:p-8">
+          <h3 className="font-heading text-lg font-semibold text-primary">{title}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
         </div>
-      </section>
+      ))}
+    </div>
+  </section>
 
-      <section className="mt-20 rounded-lg bg-navy px-6 py-12 text-center sm:px-12 sm:py-16">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
-          Your requirement may cross several sectors
-        </p>
-        <h2 className="mx-auto mt-4 max-w-2xl text-balance font-heading text-3xl font-semibold text-white sm:text-4xl">
-          Not sure where your project fits?
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#aebccb]">
-          Share the component, process and volume. We&apos;ll assess whether the Baltic supply base is a credible match before recommending a search.
-        </p>
-        <Link
-          href="/contact"
-          className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-medium text-navy transition-colors hover:bg-[#e8ecef]"
-        >
-          Assess Your Requirement
-          <ArrowRight className="h-4 w-4" />
-        </Link>
-      </section>
-    </PageShell>
+  <section className="mt-20 rounded-lg bg-navy px-6 py-12 text-center sm:px-12 sm:py-16">
+    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
+      Your requirement may cross several sectors
+    </p>
+    <h2 className="mx-auto mt-4 max-w-2xl text-balance font-heading text-3xl font-semibold text-white sm:text-4xl">
+      Not sure where your project fits?
+    </h2>
+    <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#aebccb]">
+      Share the component, process and volume. We&apos;ll assess whether the Baltic supply base is a credible match before recommending a search.
+    </p>
+    <Link
+      href="/contact"
+      className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-medium text-navy transition-colors hover:bg-[#e8ecef]"
+    >
+      Assess Your Requirement
+      <ArrowRight className="h-4 w-4" />
+    </Link>
+  </section>
+</PageShell>
   )
 }

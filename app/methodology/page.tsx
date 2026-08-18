@@ -11,9 +11,28 @@ import {
 import { PageShell } from '@/components/page-shell'
 
 export const metadata: Metadata = {
-  title: 'Methodology',
+  title: 'Supplier Qualification Methodology',
   description:
-    'A transparent, evidence-based process for supplier discovery, evaluation and qualification in the Baltic States.',
+    'Discover Baltic Veridion’s structured five-step methodology for supplier discovery, evaluation, due diligence, factory audits and production support across the Baltic States.',
+  alternates: {
+    canonical: '/methodology',
+  },
+  openGraph: {
+    title: 'Supplier Qualification Methodology | Baltic Veridion',
+    description:
+      'A transparent, evidence-based methodology for identifying, evaluating and qualifying industrial suppliers in Lithuania, Latvia and Estonia.',
+    url: 'https://balticveridion.com/methodology',
+    siteName: 'Baltic Veridion',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Baltic Veridion Methodology',
+      },
+    ],
+  },
 }
 
 const steps = [

@@ -15,7 +15,26 @@ import { PageShell } from '@/components/page-shell'
 export const metadata: Metadata = {
   title: 'Industrial Sourcing Services',
   description:
-    'Independent supplier discovery, evaluation, due diligence, factory audits and production monitoring across Lithuania, Latvia and Estonia.',
+    'Independent supplier discovery, evaluation, due diligence, factory audits and production monitoring for European manufacturers across Lithuania, Latvia and Estonia.',
+  alternates: {
+    canonical: '/services',
+  },
+  openGraph: {
+    title: 'Industrial Sourcing Services | Baltic Veridion',
+    description:
+      'Independent supplier discovery, evaluation, due diligence, factory audits and production monitoring across the Baltic States.',
+    url: 'https://balticveridion.com/services',
+    siteName: 'Baltic Veridion',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Baltic Veridion Industrial Sourcing Services',
+      },
+    ],
+  },
 }
 
 const services = [
@@ -159,16 +178,30 @@ export default function ServicesPage() {
       <div className="rounded-lg border border-border bg-card px-6 py-6 sm:px-8">
         <div className="grid gap-6 sm:grid-cols-3 sm:divide-x sm:divide-border">
           <div>
-            <p className="font-heading text-2xl font-semibold text-primary">100%</p>
-            <p className="mt-1 text-sm text-muted-foreground">Buyer-side representation</p>
+            <p className="font-heading text-2xl font-semibold text-primary">
+              100%
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Buyer-side representation
+            </p>
           </div>
+
           <div className="sm:pl-6">
-            <p className="font-heading text-2xl font-semibold text-primary">3 markets</p>
-            <p className="mt-1 text-sm text-muted-foreground">Lithuania, Latvia and Estonia</p>
+            <p className="font-heading text-2xl font-semibold text-primary">
+              3 markets
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Lithuania, Latvia and Estonia
+            </p>
           </div>
+
           <div className="sm:pl-6">
-            <p className="font-heading text-2xl font-semibold text-primary">0%</p>
-            <p className="mt-1 text-sm text-muted-foreground">Supplier commissions</p>
+            <p className="font-heading text-2xl font-semibold text-primary">
+              0%
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Supplier commissions
+            </p>
           </div>
         </div>
       </div>
@@ -197,9 +230,11 @@ export default function ServicesPage() {
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-secondary text-navy">
                   <service.icon className="h-5 w-5" />
                 </span>
+
                 <h2 className="mt-5 font-heading text-3xl font-semibold tracking-tight text-primary">
                   {service.name}
                 </h2>
+
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                   {service.introduction}
                 </p>
@@ -207,9 +242,13 @@ export default function ServicesPage() {
                 <h3 className="mt-7 text-xs font-semibold uppercase tracking-[0.16em] text-teal">
                   Client benefits
                 </h3>
+
                 <ul className="mt-4 space-y-3">
                   {service.benefits.map((benefit) => (
-                    <li key={benefit} className="flex gap-3 text-sm text-foreground/80">
+                    <li
+                      key={benefit}
+                      className="flex gap-3 text-sm text-foreground/80"
+                    >
                       <Check className="mt-0.5 h-4 w-4 flex-none text-teal" />
                       <span>{benefit}</span>
                     </li>
@@ -222,9 +261,13 @@ export default function ServicesPage() {
               <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-steel">
                 Typical deliverables
               </h3>
+
               <ul className="mt-5 grid gap-4 sm:grid-cols-2">
                 {service.deliverables.map((deliverable) => (
-                  <li key={deliverable} className="flex items-start gap-3 text-sm text-foreground/80">
+                  <li
+                    key={deliverable}
+                    className="flex items-start gap-3 text-sm text-foreground/80"
+                  >
                     <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-teal" />
                     {deliverable}
                   </li>
@@ -239,16 +282,22 @@ export default function ServicesPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
           Our five-step sourcing process
         </p>
+
         <h2 className="mt-4 max-w-2xl font-heading text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
           One transparent path from requirement to reliable production
         </h2>
+
         <ol className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-5">
           {process.map((item) => (
             <li key={item.step} className="bg-card p-6">
-              <span className="font-heading text-sm font-semibold text-teal">{item.step}</span>
+              <span className="font-heading text-sm font-semibold text-teal">
+                {item.step}
+              </span>
+
               <h3 className="mt-5 font-heading text-lg font-semibold text-primary">
                 {item.title}
               </h3>
+
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {item.body}
               </p>
@@ -261,12 +310,16 @@ export default function ServicesPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
           Start with your requirements
         </p>
+
         <h2 className="mx-auto mt-4 max-w-2xl text-balance font-heading text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           Let&apos;s discuss your sourcing project
         </h2>
+
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#aebccb]">
-          Tell us what you need to manufacture, your target market and the risks you want to reduce. We&apos;ll recommend a practical first step.
+          Tell us what you need to manufacture, your target market and the risks
+          you want to reduce. We&apos;ll recommend a practical first step.
         </p>
+
         <Link
           href="/contact"
           className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-medium text-navy transition-colors hover:bg-[#e8ecef]"
