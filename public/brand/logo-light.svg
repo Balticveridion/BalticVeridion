@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="150" viewBox="0 0 550 150" role="img" aria-labelledby="title desc">
+  <title id="title">Baltic Veridion</title><desc id="desc">Baltic Veridion Industrial Sourcing logo</desc>
+  <g>
+    <g transform="translate(8 8)"><g aria-label="BV monogram" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Open rounded frame: the intentional right-side break gives the V room to exit. -->
+    <path d="M104 43V18c0-7.7-6.3-14-14-14H18C10.3 4 4 10.3 4 18v84c0 7.7 6.3 14 14 14h72c7.7 0 14-6.3 14-14V91" stroke="#FFFFFF" stroke-width="7"/>
+    <!-- Geometric B -->
+    <path d="M25 27v66M26 28h29c13.4 0 21 6.5 21 17.2 0 10.8-7.6 17.8-21 17.8H26M26 63h32c13.6 0 21.5 6 21.5 15.3C79.5 87.7 71.6 93 58 93H26" stroke="#FFFFFF" stroke-width="7"/>
+    <!-- Baltic teal V -->
+    <path d="M59 62l17 34 29-59" stroke="#037678" stroke-width="7.5" stroke-linecap="square"/>
+  </g></g>
+    <g font-family="Montserrat, Arial, sans-serif">
+      <text x="158" y="59" fill="#FFFFFF" font-size="41" font-weight="700" letter-spacing="4.2">BALTIC</text>
+      <text x="158" y="108" fill="#FFFFFF" font-size="48" font-weight="500" letter-spacing="7">VERIDION</text>
+      <path d="M160 133h27M510 133h27" stroke="#037678" stroke-width="3"/>
+      <text x="202" y="139" fill="#FFFFFF" font-size="13" font-weight="500" letter-spacing="3.7">INDUSTRIAL SOURCING</text>
+    </g>
+  </g>
+</svg>

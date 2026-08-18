@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Baltic Veridion BV</title><desc id="desc">Baltic Veridion monogram</desc>
+  <g transform="translate(8 6)"><g aria-label="BV monogram" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Open rounded frame: the intentional right-side break gives the V room to exit. -->
+    <path d="M104 43V18c0-7.7-6.3-14-14-14H18C10.3 4 4 10.3 4 18v84c0 7.7 6.3 14 14 14h72c7.7 0 14-6.3 14-14V91" stroke="#031D35" stroke-width="7"/>
+    <!-- Geometric B -->
+    <path d="M25 27v66M26 28h29c13.4 0 21 6.5 21 17.2 0 10.8-7.6 17.8-21 17.8H26M26 63h32c13.6 0 21.5 6 21.5 15.3C79.5 87.7 71.6 93 58 93H26" stroke="#031D35" stroke-width="7"/>
+    <!-- Baltic teal V -->
+    <path d="M59 62l17 34 29-59" stroke="#037678" stroke-width="7.5" stroke-linecap="square"/>
+  </g></g>
+</svg>
