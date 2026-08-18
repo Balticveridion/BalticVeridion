@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Manrope, Inter } from 'next/font/google'
 import './globals.css'
@@ -16,7 +17,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://veridion-seven.vercel.app'),
+  metadataBase: new URL('https://balticveridion.com'),
   title: {
     default: 'Baltic Veridion — Trusted Baltic Industrial Partner',
     template: '%s | Baltic Veridion',
@@ -60,10 +61,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable} bg-background`}>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${inter.variable} bg-background`}
+    >
       <body className="font-sans antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Analytics />
+            <GoogleAnalytics gaId="G-H5TZQGJWDC" />
+          </>
+        )}
       </body>
     </html>
   )
