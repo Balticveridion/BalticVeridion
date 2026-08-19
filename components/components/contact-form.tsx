@@ -4,7 +4,7 @@ import { useForm, ValidationError } from '@formspree/react'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm('mnpaoekq')
+  const [state, handleSubmit] = useForm('mnpaoykr')
 
   if (state.succeeded) {
     return (
@@ -58,8 +58,8 @@ export default function ContactForm() {
             name="name"
             required
             autoComplete="name"
-            placeholder="Your name"
             className="w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+            placeholder="Your name"
           />
         </div>
 
@@ -76,8 +76,8 @@ export default function ContactForm() {
             type="text"
             name="company"
             autoComplete="organization"
-            placeholder="Company name"
             className="w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+            placeholder="Company name"
           />
         </div>
       </div>
@@ -96,8 +96,8 @@ export default function ContactForm() {
           name="email"
           required
           autoComplete="email"
-          placeholder="name@company.com"
           className="w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+          placeholder="name@company.com"
         />
 
         <ValidationError
@@ -120,8 +120,8 @@ export default function ContactForm() {
           id="subject"
           type="text"
           name="subject"
-          placeholder="Supplier sourcing enquiry"
           className="w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+          placeholder="Supplier sourcing enquiry"
         />
       </div>
 
@@ -138,8 +138,8 @@ export default function ContactForm() {
           name="message"
           rows={7}
           required
-          placeholder="Tell us about the component, process, expected volume and current sourcing challenge."
           className="w-full resize-y rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+          placeholder="Tell us about the component, process, expected volume and current sourcing challenge."
         />
 
         <ValidationError

@@ -9,6 +9,7 @@ import {
   ShieldCheck,
 } from 'lucide-react'
 import { PageShell } from '@/components/page-shell'
+import ContactForm from '@/components/contact-form'
 
 export const metadata: Metadata = {
   title: 'Contact Baltic Veridion',
@@ -36,22 +37,6 @@ export const metadata: Metadata = {
 }
 
 const contactEmail = 'contact@balticveridion.com'
-
-const topics = [
-  'Supplier Discovery™',
-  'Supplier Evaluation™',
-  'Supplier Due Diligence™',
-  'Factory Audit™',
-  'Production Monitoring™',
-]
-
-const projectDetails = [
-  'Your industry and company',
-  'Product, component or manufacturing process',
-  'Expected production volume',
-  'Target country or region',
-  'Current sourcing challenge',
-]
 
 export default function ContactPage() {
   return (
@@ -89,6 +74,7 @@ export default function ContactPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-steel">
                   Email
                 </p>
+
                 <p className="mt-1 truncate font-heading text-lg font-semibold text-primary">
                   {contactEmail}
                 </p>
@@ -106,6 +92,7 @@ export default function ContactPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-steel">
                   Regional focus
                 </p>
+
                 <p className="mt-1 font-heading text-lg font-semibold text-primary">
                   Lithuania · Latvia · Estonia
                 </p>
@@ -121,6 +108,7 @@ export default function ContactPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-steel">
                   Response
                 </p>
+
                 <p className="mt-1 font-heading text-lg font-semibold text-primary">
                   Within one business day
                 </p>
@@ -129,67 +117,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="rounded-lg border border-border bg-secondary/40 p-7 sm:p-9">
-          <div className="flex items-center gap-3">
-            <MessageSquareText className="h-6 w-6 text-teal" />
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
-              Project enquiry
-            </p>
-          </div>
-
-          <h2 className="mt-4 font-heading text-2xl font-semibold text-primary sm:text-3xl">
-            What would you like to discuss?
-          </h2>
-
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Select the area most relevant to your project and send us a brief
-            overview by email.
-          </p>
-
-          <div className="mt-7 grid gap-3 sm:grid-cols-2">
-            {topics.map((topic) => (
-              <div
-                key={topic}
-                className="flex items-center gap-3 rounded-md border border-border bg-card px-4 py-3.5"
-              >
-                <ShieldCheck className="h-4 w-4 flex-none text-teal" />
-                <span className="text-sm font-medium text-primary">
-                  {topic}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 rounded-lg bg-card p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-steel">
-              Helpful information to include
-            </p>
-
-            <ul className="mt-5 space-y-3">
-              {projectDetails.map((detail) => (
-                <li
-                  key={detail}
-                  className="flex gap-3 text-sm leading-relaxed text-foreground/80"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-teal" />
-                  {detail}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <a
-            href={`mailto:${contactEmail}?subject=Baltic%20Veridion%20Sourcing%20Enquiry`}
-            className="group mt-7 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-navy/90"
-          >
-            Start the Conversation
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
-
-          <p className="mt-4 text-center text-xs leading-relaxed text-muted-foreground">
-            Your enquiry will be treated confidentially.
-          </p>
-        </div>
+        <ContactForm />
       </section>
 
       <section className="mt-24">
