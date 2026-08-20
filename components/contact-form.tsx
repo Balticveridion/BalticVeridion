@@ -8,7 +8,7 @@ export default function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <div className="flex min-h-[420px] flex-col items-center justify-center rounded-lg border border-border bg-card p-8 text-center sm:p-10">
+      <div className="flex min-h-[420px] w-full max-w-full min-w-0 flex-col items-center justify-center rounded-lg border border-border bg-card p-6 text-center sm:p-10">
         <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-secondary text-teal">
           <CheckCircle2 className="h-7 w-7" />
         </span>
@@ -18,8 +18,8 @@ export default function ContactForm() {
         </h2>
 
         <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-          Your message has been sent successfully. Baltic Veridion will respond
-          within one business day.
+          Your message has been sent successfully. Baltic Veridion will
+          respond within one business day.
         </p>
       </div>
     )
@@ -28,7 +28,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-lg border border-border bg-secondary/40 p-7 sm:p-9"
+      className="w-full max-w-full min-w-0 overflow-hidden rounded-lg border border-border bg-secondary/40 p-5 sm:p-9"
     >
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
         Project enquiry
@@ -43,8 +43,8 @@ export default function ContactForm() {
         within one business day.
       </p>
 
-      <div className="mt-8 grid gap-5 sm:grid-cols-2">
-        <div>
+      <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="min-w-0">
           <label
             htmlFor="name"
             className="mb-2 block text-sm font-medium text-primary"
@@ -59,11 +59,11 @@ export default function ContactForm() {
             required
             autoComplete="name"
             placeholder="Your name"
-            className="w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+            className="w-full min-w-0 max-w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
           />
         </div>
 
-        <div>
+        <div className="min-w-0">
           <label
             htmlFor="company"
             className="mb-2 block text-sm font-medium text-primary"
@@ -77,12 +77,12 @@ export default function ContactForm() {
             name="company"
             autoComplete="organization"
             placeholder="Company name"
-            className="w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+            className="w-full min-w-0 max-w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
           />
         </div>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 min-w-0">
         <label
           htmlFor="email"
           className="mb-2 block text-sm font-medium text-primary"
@@ -97,7 +97,7 @@ export default function ContactForm() {
           required
           autoComplete="email"
           placeholder="name@company.com"
-          className="w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+          className="w-full min-w-0 max-w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
         />
 
         <ValidationError
@@ -108,7 +108,7 @@ export default function ContactForm() {
         />
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 min-w-0">
         <label
           htmlFor="subject"
           className="mb-2 block text-sm font-medium text-primary"
@@ -121,11 +121,11 @@ export default function ContactForm() {
           type="text"
           name="subject"
           placeholder="Supplier sourcing enquiry"
-          className="w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+          className="w-full min-w-0 max-w-full rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
         />
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 min-w-0">
         <label
           htmlFor="message"
           className="mb-2 block text-sm font-medium text-primary"
@@ -139,7 +139,7 @@ export default function ContactForm() {
           rows={7}
           required
           placeholder="Tell us about the component, process, expected volume and current sourcing challenge."
-          className="w-full resize-y rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
+          className="w-full min-w-0 max-w-full resize-y rounded-md border border-border bg-card px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-teal"
         />
 
         <ValidationError
